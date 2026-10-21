@@ -50,7 +50,12 @@ public class EmpleadoService {
                 .orElse(null);
     }
     //Borrar
-
+    @Transactional
+    public void deleteEmpleado(Long id) {
+        Empleado e = getEmpleadosById(id);
+        fichajeRepository.deleteByEmpleadoId(id);
+        empleadoRepository.delete(e);
+    }
 
     public Empleado asignarDepartamento(Long empleadoId, Long deptoId) {
         Empleado e = getEmpleadosById(empleadoId);

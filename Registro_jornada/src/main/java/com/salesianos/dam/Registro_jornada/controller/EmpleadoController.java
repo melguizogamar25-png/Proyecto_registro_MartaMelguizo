@@ -53,6 +53,13 @@ public class EmpleadoController {
     }
 
     //Borrar
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteEmpleado(
+            @PathVariable @Min(value = 1) Long id) {
+        empleadoService.deleteEmpleado(id);
+        return ResponseEntity.noContent().build();
+    }
+
 
     @PutMapping("/{empleadoId}/departamento/{deptoId}")
     public ResponseEntity<EmpleadoResponseDto> asignarDepartamento(

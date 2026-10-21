@@ -1,0 +1,40 @@
+package com.salesianos.dam.Registro_jornada.service;
+
+import com.salesianos.dam.Registro_jornada.model.Empleado;
+import com.salesianos.dam.Registro_jornada.model.Fichaje;
+import com.salesianos.dam.Registro_jornada.model.TipoFichaje;
+import com.salesianos.dam.Registro_jornada.repository.EmpleadoRepository;
+import com.salesianos.dam.Registro_jornada.repository.FichajeRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
+import java.time.LocalDateTime;
+
+@Service
+@RequiredArgsConstructor
+public class FichajeService {
+
+    private final FichajeRepository fichajeRepository;
+    private EmpleadoRepository empleadoRepository;
+
+    public Fichaje ficharEmpleado(Long empleadoId, TipoFichaje tipo) {
+        Empleado empleado = empleadoRepository.findById(empleadoId)
+                .orElse(null); //Sustituto
+
+        TipoFichaje ultimo = fichajeRepository
+                .findFirstByEmpleadoIdOrderByMomentoDescIdDesc(empleadoId)
+                .map(Fichaje::getTipo)
+                .orElse(null);
+
+        TipoFichaje nuevo = tipo != null ? tipo : (ultimo == TipoFichaje.ENTRADA ? TipoFichaje.SALIDA : TipoFichaje.ENTRADA);
+
+    //Excepcion fichaje duplicado
+
+        return fichajeRepository.save(
+                Fichaje.builder()
+                        .momento(LocalDateTime.now())
+                        .tipo(nuevo)
+                        .empleado(empleado)
+                        .build());
+    }
+}
