@@ -22,6 +22,7 @@ public class EmpleadoService {
     private final FichajeRepository fichajeRepository;
 
     public List<Empleado> getAllEmpleados() {
+
         return empleadoRepository.findAll();
     }
 

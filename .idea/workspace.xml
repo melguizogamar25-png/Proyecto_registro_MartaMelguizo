@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d699332-c34c-47b9-8d3a-c484e6870db5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/service/FichajeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/DTO/DepartamentoResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/DTO/DepartamentoResponseDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/controller/EmpleadoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/controller/EmpleadoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/model/Departamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/model/Departamento.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/repository/FichajeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/repository/FichajeRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/service/EmpleadoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/service/EmpleadoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/service/iii.java" beforeDir="false" afterPath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/service/iii.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +112,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "6-05-fichar",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/mamel/2DAM/dam-ad_psp/Proyecto_registro_MartaMelguizo",

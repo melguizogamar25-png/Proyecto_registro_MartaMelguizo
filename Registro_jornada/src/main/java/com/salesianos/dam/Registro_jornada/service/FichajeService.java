@@ -9,13 +9,14 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
 public class FichajeService {
 
     private final FichajeRepository fichajeRepository;
-    private EmpleadoRepository empleadoRepository;
+    private final EmpleadoRepository empleadoRepository;
 
     public Fichaje ficharEmpleado(Long empleadoId, TipoFichaje tipo) {
         Empleado empleado = empleadoRepository.findById(empleadoId)
@@ -36,5 +37,10 @@ public class FichajeService {
                         .tipo(nuevo)
                         .empleado(empleado)
                         .build());
+    }
+
+    public List<Fichaje> getFichajesByEmpleado(Long empleadoId) {
+       //Excepcion
+        return fichajeRepository.findByEmpleadoIdOrderByMomentoAscIdAsc(empleadoId);
     }
 }

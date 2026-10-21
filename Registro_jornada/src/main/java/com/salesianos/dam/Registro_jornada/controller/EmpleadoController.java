@@ -2,7 +2,10 @@ package com.salesianos.dam.Registro_jornada.controller;
 
 import com.salesianos.dam.Registro_jornada.DTO.EmpleadoRequestDto;
 import com.salesianos.dam.Registro_jornada.DTO.EmpleadoResponseDto;
+import com.salesianos.dam.Registro_jornada.DTO.FichajeRequestDto;
+import com.salesianos.dam.Registro_jornada.DTO.FichajeResponseDto;
 import com.salesianos.dam.Registro_jornada.service.EmpleadoService;
+import com.salesianos.dam.Registro_jornada.service.FichajeService;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Min;
 import lombok.RequiredArgsConstructor;
@@ -20,6 +23,7 @@ import java.util.List;
 public class EmpleadoController {
 
     private final EmpleadoService empleadoService;
+    private final FichajeService fichajeService;
 
     @GetMapping
     public ResponseEntity<List<EmpleadoResponseDto>> getAllEmpleado() {
@@ -52,7 +56,7 @@ public class EmpleadoController {
                 EmpleadoResponseDto.of(empleadoService.updateEmpleado(id, empleado)));
     }
 
-    //Borrar
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteEmpleado(
             @PathVariable @Min(value = 1) Long id) {
@@ -67,5 +71,25 @@ public class EmpleadoController {
             @PathVariable @Min(value = 1) Long deptoId) {
         return ResponseEntity.ok(
                 EmpleadoResponseDto.of(empleadoService.asignarDepartamento(empleadoId, deptoId)));
+    }
+
+    @PostMapping("/{empleadoId}/fichar")
+    public ResponseEntity<FichajeResponseDto> ficharEmpleado(
+            @PathVariable @Min(value = 1) Long empleadoId,
+            @RequestBody(required = false) FichajeRequestDto fichaje) {
+
+        return ResponseEntity.status(201)
+                .body(FichajeResponseDto.of(
+                        fichajeService.ficharEmpleado(empleadoId, fichaje != null ? fichaje.tipo() : null)));
+    }
+
+    @GetMapping("/{empleadoId}/fichajes")
+    public ResponseEntity<List<FichajeResponseDto>> getFichajesByEmpleado(
+            @PathVariable @Min(value = 1) Long empleadoId) {
+        return ResponseEntity.ok(
+                fichajeService.getFichajesByEmpleado(empleadoId)
+                        .stream()
+                        .map(FichajeResponseDto::of)
+                        .toList());
     }
 }
