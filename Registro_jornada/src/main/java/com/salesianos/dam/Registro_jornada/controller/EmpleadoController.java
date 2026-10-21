@@ -1,0 +1,56 @@
+package com.salesianos.dam.Registro_jornada.controller;
+
+import com.salesianos.dam.Registro_jornada.DTO.EmpleadoRequestDto;
+import com.salesianos.dam.Registro_jornada.DTO.EmpleadoResponseDto;
+import com.salesianos.dam.Registro_jornada.service.EmpleadoService;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Min;
+import lombok.RequiredArgsConstructor;
+import org.apache.coyote.Response;
+import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequiredArgsConstructor
+@RequestMapping("/api/v1/empleados")
+@Validated
+public class EmpleadoController {
+
+    private final EmpleadoService empleadoService;
+
+    @GetMapping
+    public ResponseEntity<List<EmpleadoResponseDto>> getAllEmpleado() {
+        return ResponseEntity.ok(
+                empleadoService.getAllEmpleados()
+                        .stream()
+                        .map(EmpleadoResponseDto::of)
+                        .toList());
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<EmpleadoResponseDto> getEmpleadoById(
+            @PathVariable @Min(value = 1) Long id) {
+        return ResponseEntity.ok(
+                EmpleadoResponseDto.of(empleadoService.getEmpleadosById(id)));
+    }
+
+    @PostMapping
+    public ResponseEntity<EmpleadoResponseDto> addEmpleado(
+            @Valid @RequestBody EmpleadoRequestDto empleado) {
+        return ResponseEntity.status(201)
+                .body(EmpleadoResponseDto.of(empleadoService.addEmpleado(empleado)));
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<EmpleadoResponseDto> updateEmpleado(
+            @PathVariable @Min(value = 1) Long id,
+            @Valid @RequestBody EmpleadoRequestDto empleado) {
+        return ResponseEntity.ok(
+                EmpleadoResponseDto.of(empleadoService.updateEmpleado(id, empleado)));
+    }
+
+    
+}
