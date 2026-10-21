@@ -52,5 +52,13 @@ public class EmpleadoController {
                 EmpleadoResponseDto.of(empleadoService.updateEmpleado(id, empleado)));
     }
 
-    
+    //Borrar
+
+    @PutMapping("/{empleadoId}/departamento/{deptoId}")
+    public ResponseEntity<EmpleadoResponseDto> asignarDepartamento(
+            @PathVariable @Min(value = 1) Long empleadoId,
+            @PathVariable @Min(value = 1) Long deptoId) {
+        return ResponseEntity.ok(
+                EmpleadoResponseDto.of(empleadoService.asignarDepartamento(empleadoId, deptoId)));
+    }
 }

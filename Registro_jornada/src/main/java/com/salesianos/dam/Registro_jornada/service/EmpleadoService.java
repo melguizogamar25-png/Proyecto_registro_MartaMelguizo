@@ -52,6 +52,12 @@ public class EmpleadoService {
     //Borrar
 
 
+    public Empleado asignarDepartamento(Long empleadoId, Long deptoId) {
+        Empleado e = getEmpleadosById(empleadoId);
+        e.setDepartamento(getDepartamento(deptoId));
+        return empleadoRepository.save(e);
+    }
+
     private Departamento getDepartamento(Long deptoId) {
         return departamentoRepository.findById(deptoId)
                 .orElse(null); //Sustitu
