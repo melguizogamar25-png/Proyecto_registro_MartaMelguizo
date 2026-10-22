@@ -23,7 +23,6 @@ import java.util.List;
 public class EmpleadoController {
 
     private final EmpleadoService empleadoService;
-    private final FichajeService fichajeService;
 
     @GetMapping
     public ResponseEntity<List<EmpleadoResponseDto>> getAllEmpleado() {
@@ -73,23 +72,4 @@ public class EmpleadoController {
                 EmpleadoResponseDto.of(empleadoService.asignarDepartamento(empleadoId, deptoId)));
     }
 
-    @PostMapping("/{empleadoId}/fichar")
-    public ResponseEntity<FichajeResponseDto> ficharEmpleado(
-            @PathVariable @Min(value = 1) Long empleadoId,
-            @RequestBody(required = false) FichajeRequestDto fichaje) {
-
-        return ResponseEntity.status(201)
-                .body(FichajeResponseDto.of(
-                        fichajeService.ficharEmpleado(empleadoId, fichaje != null ? fichaje.tipo() : null)));
-    }
-
-    @GetMapping("/{empleadoId}/fichajes")
-    public ResponseEntity<List<FichajeResponseDto>> getFichajesByEmpleado(
-            @PathVariable @Min(value = 1) Long empleadoId) {
-        return ResponseEntity.ok(
-                fichajeService.getFichajesByEmpleado(empleadoId)
-                        .stream()
-                        .map(FichajeResponseDto::of)
-                        .toList());
-    }
 }

@@ -22,7 +22,6 @@ public class EmpleadoService {
     private final FichajeRepository fichajeRepository;
 
     public List<Empleado> getAllEmpleados() {
-
         return empleadoRepository.findAll();
     }
 
@@ -50,7 +49,7 @@ public class EmpleadoService {
                 })
                 .orElse(null);
     }
-    //Borrar
+
     @Transactional
     public void deleteEmpleado(Long id) {
         Empleado e = getEmpleadosById(id);

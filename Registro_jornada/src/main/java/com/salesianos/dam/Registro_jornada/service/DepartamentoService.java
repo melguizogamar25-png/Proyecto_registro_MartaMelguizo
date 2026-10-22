@@ -17,7 +17,6 @@ public class DepartamentoService {
     private final DepartamentoRepository departamentoRepository;
 
     public List<Departamento> getAllDepartamentos() {
-
         return departamentoRepository.findAll();
     }
 
