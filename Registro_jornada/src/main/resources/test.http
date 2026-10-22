@@ -1,0 +1,182 @@
+### GET Todos los departamentos
+GET http://localhost:8080/api/v1/departamentos
+
+### GET obtener departamento id 1
+GET http://localhost:8080/api/v1/departamentos/1
+
+### GET obtener departamento que no existe - Error 404
+GET http://localhost:8080/api/v1/departamentos/99
+
+### POST Crear departamento
+POST http://localhost:8080/api/v1/departamentos
+Content-Type: application/json
+
+{
+  "nombre": "Marketing",
+  "presupuesto": 40000
+}
+
+### POST Crear departamento - Error 1 (nombre vacío)
+POST http://localhost:8080/api/v1/departamentos
+Content-Type: application/json
+
+{
+  "nombre": "",
+  "presupuesto": 40000
+}
+
+### POST Crear departamento - Error 2 (presupuesto negativo)
+POST http://localhost:8080/api/v1/departamentos
+Content-Type: application/json
+
+{
+  "nombre": "Marketing",
+  "presupuesto": -1
+}
+
+### POST Crear departamento - Error 3 (nombre repetido, 409)
+POST http://localhost:8080/api/v1/departamentos
+Content-Type: application/json
+
+{
+  "nombre": "Desarrollo",
+  "presupuesto": 40000
+}
+
+### PUT Modificar departamento
+PUT http://localhost:8080/api/v1/departamentos/2
+Content-Type: application/json
+
+{
+  "nombre": "Recursos Humanos",
+  "presupuesto": 55000
+}
+
+### DELETE borrar departamento con empleados - Error 409
+DELETE http://localhost:8080/api/v1/departamentos/1
+
+### DELETE borrar departamento sin empleados (crear antes "Marketing")
+DELETE http://localhost:8080/api/v1/departamentos/3
+
+
+### GET obtener todos los empleados
+GET http://localhost:8080/api/v1/empleados
+
+### GET obtener empleado id 1
+GET http://localhost:8080/api/v1/empleados/1
+
+### GET obtener empleado que no existe - Error 404
+GET http://localhost:8080/api/v1/empleados/99
+
+### POST Crear empleado en el departamento 1
+POST http://localhost:8080/api/v1/empleados
+Content-Type: application/json
+
+{
+  "nombreCompleto": "Pedro Sánchez Mora",
+  "cargo": "Tester",
+  "salario": 9000,
+  "departamentoId": 1
+}
+
+### POST Crear empleado sin departamento
+POST http://localhost:8080/api/v1/empleados
+Content-Type: application/json
+
+{
+  "nombreCompleto": "Lucía Romero Vega",
+  "cargo": "Becaria",
+  "salario": 12000
+}
+
+### POST Crear empleado - Error 1 (nombre vacío)
+POST http://localhost:8080/api/v1/empleados
+Content-Type: application/json
+
+{
+  "nombreCompleto": "",
+  "cargo": "Tester",
+  "salario": 9000,
+  "departamentoId": 1
+}
+
+### POST Crear empleado - Error 2 (salario negativo)
+POST http://localhost:8080/api/v1/empleados
+Content-Type: application/json
+
+{
+  "nombreCompleto": "Pedro Sánchez Mora",
+  "cargo": "Tester",
+  "salario": -5,
+  "departamentoId": 1
+}
+
+### POST Crear empleado - Error 3 (los salarios superan el presupuesto del departamento)
+POST http://localhost:8080/api/v1/empleados
+Content-Type: application/json
+
+{
+  "nombreCompleto": "Pedro Sánchez Mora",
+  "cargo": "Tester",
+  "salario": 20000,
+  "departamentoId": 1
+}
+
+### POST Crear empleado - Error 4 (departamento que no existe, 404)
+POST http://localhost:8080/api/v1/empleados
+Content-Type: application/json
+
+{
+  "nombreCompleto": "Pedro Sánchez Mora",
+  "cargo": "Tester",
+  "salario": 9000,
+  "departamentoId": 99
+}
+
+### PUT Modificar empleado
+PUT http://localhost:8080/api/v1/empleados/1
+Content-Type: application/json
+
+{
+  "nombreCompleto": "Ana Pérez García",
+  "cargo": "Desarrolladora senior",
+  "salario": 33000
+}
+
+### PUT Asignar empleado 3 al departamento 1
+PUT http://localhost:8080/api/v1/empleados/3/departamento/1
+
+### PUT Asignar empleado a departamento que no existe - Error 404
+PUT http://localhost:8080/api/v1/empleados/3/departamento/99
+
+### DELETE borrar empleado id 3
+DELETE http://localhost:8080/api/v1/empleados/3
+
+
+### POST Fichar - alterna automáticamente (Ana: su último fichaje es SALIDA, será ENTRADA)
+POST http://localhost:8080/api/v1/empleados/1/fichar
+
+### POST Fichar - indicando el tipo
+POST http://localhost:8080/api/v1/empleados/1/fichar
+Content-Type: application/json
+
+{
+  "tipo": "SALIDA"
+}
+
+### POST Fichar - Error 409 (Luis ya tiene una ENTRADA como último fichaje)
+POST http://localhost:8080/api/v1/empleados/2/fichar
+Content-Type: application/json
+
+{
+  "tipo": "ENTRADA"
+}
+
+### POST Fichar - Error 404 (empleado que no existe)
+POST http://localhost:8080/api/v1/empleados/99/fichar
+
+### GET historial de fichajes del empleado 1
+GET http://localhost:8080/api/v1/empleados/1/fichajes
+
+### GET historial de fichajes de empleado que no existe - Error 404
+GET http://localhost:8080/api/v1/empleados/99/fichajes

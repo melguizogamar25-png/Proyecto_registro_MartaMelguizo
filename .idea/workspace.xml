@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d699332-c34c-47b9-8d3a-c484e6870db5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/controller/FichajeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Registro_jornada/src/main/resources/test.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/DTO/DepartamentoResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/DTO/DepartamentoResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/controller/EmpleadoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/controller/EmpleadoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/model/Departamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/model/Departamento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/repository/FichajeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/repository/FichajeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/service/EmpleadoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/service/EmpleadoService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,61 +36,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0000000020788038" />
-      <entry key="S10" value="1.0000456482245705" />
-      <entry key="S30" value="1.046238631691944" />
-      <entry key="S60" value="1.5108603721033158" />
-      <entry key="M2" value="4.100870530855279" />
-      <entry key="M5" value="14.647233445793107" />
-      <entry key="M10" value="27.522236058277635" />
-      <entry key="M15" value="36.01790922042497" />
-      <entry key="M30" value="50.95104030696225" />
-      <entry key="H1" value="69.4573103895006" />
-      <entry key="H2" value="95.82767404838611" />
-      <entry key="H4" value="123.50800368888696" />
-      <entry key="D1" value="162.54769480109474" />
-      <entry key="W1" value="171.44054534300258" />
+      <entry key="MS100" value="2.2236166681887326E-43" />
+      <entry key="MS500" value="3.029212050199419E-9" />
+      <entry key="S2" value="0.01221352260222012" />
+      <entry key="S5" value="0.3599014401515921" />
+      <entry key="S10" value="1.1805052796018267" />
+      <entry key="S30" value="2.719790689077646" />
+      <entry key="S60" value="3.9070144129316424" />
+      <entry key="M2" value="6.398631082997773" />
+      <entry key="M5" value="15.915864284102328" />
+      <entry key="M10" value="29.361091941408002" />
+      <entry key="M15" value="38.75503680139438" />
+      <entry key="M30" value="55.50407243007822" />
+      <entry key="H1" value="75.43696484038023" />
+      <entry key="H2" value="102.76114665606083" />
+      <entry key="H4" value="131.18409593196768" />
+      <entry key="D1" value="171.25873538590517" />
+      <entry key="W1" value="180.39704139979364" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="3.5035773797352855E-88" />
-      <entry key="S2" value="1.9756566500602337E-22" />
-      <entry key="S5" value="3.1225754007465255E-9" />
-      <entry key="S10" value="8.627246369945031E-5" />
-      <entry key="S30" value="0.12304029572801178" />
-      <entry key="S60" value="1.0191367203308668" />
-      <entry key="M2" value="3.904864530154415" />
-      <entry key="M5" value="11.927153314243926" />
-      <entry key="M10" value="20.231483874116698" />
-      <entry key="M15" value="25.369751567227727" />
-      <entry key="M30" value="34.120765612196756" />
-      <entry key="H1" value="44.89039302546593" />
-      <entry key="H2" value="60.56260114547032" />
-      <entry key="H4" value="77.36907464117505" />
-      <entry key="D1" value="101.48228113581816" />
-      <entry key="W1" value="107.02614077792731" />
+      <entry key="MS100" value="1.0000000064861072" />
+      <entry key="MS500" value="1.0230354565201734" />
+      <entry key="S2" value="1.38958228983025" />
+      <entry key="S5" value="1.6858666446989994" />
+      <entry key="S10" value="1.8281951510480114" />
+      <entry key="S30" value="2.000627138103211" />
+      <entry key="S60" value="2.53459842676746" />
+      <entry key="M2" value="4.489209327219006" />
+      <entry key="M5" value="11.855786483242188" />
+      <entry key="M10" value="21.003616637370044" />
+      <entry key="M15" value="26.960048839943443" />
+      <entry key="M30" value="37.12994071325245" />
+      <entry key="H1" value="48.9271512968765" />
+      <entry key="H2" value="65.24947877794861" />
+      <entry key="H4" value="82.53589797236617" />
+      <entry key="D1" value="107.30121665106661" />
+      <entry key="W1" value="112.99888786520135" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="2.07001392737987E-5" />
-      <entry key="MS500" value="0.11566305350473151" />
-      <entry key="S2" value="0.5831746848942336" />
-      <entry key="S5" value="0.8059710971811775" />
-      <entry key="S10" value="0.8978834381065364" />
-      <entry key="S30" value="1.1276030925130942" />
-      <entry key="S60" value="2.4787485508519143" />
-      <entry key="M2" value="7.923040811494456" />
-      <entry key="M5" value="26.471626715677235" />
-      <entry key="M10" value="47.665719339020875" />
-      <entry key="M15" value="61.314175495329444" />
-      <entry key="M30" value="85.0229359889994" />
-      <entry key="H1" value="114.3162433650369" />
-      <entry key="H2" value="156.3695923028191" />
-      <entry key="H4" value="200.86411197308985" />
-      <entry key="D1" value="264.0271912847184" />
-      <entry key="W1" value="278.4662678964999" />
+      <entry key="MS100" value="1.5258789062501406E-5" />
+      <entry key="MS500" value="0.1090874690529425" />
+      <entry key="S2" value="0.7114491003461318" />
+      <entry key="S5" value="1.5543529573936588" />
+      <entry key="S10" value="2.6587511142101397" />
+      <entry key="S30" value="4.55095595760008" />
+      <entry key="S60" value="6.328102510637713" />
+      <entry key="M2" value="10.78961067021425" />
+      <entry key="M5" value="27.66914101335535" />
+      <entry key="M10" value="50.273510872069515" />
+      <entry key="M15" value="65.63712341386552" />
+      <entry key="M30" value="92.5808272186437" />
+      <entry key="H1" value="124.32973873861134" />
+      <entry key="H2" value="167.98824561692902" />
+      <entry key="H4" value="213.7060946029588" />
+      <entry key="D1" value="278.55699357708846" />
+      <entry key="W1" value="293.3954856068784" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -105,25 +102,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/mamel/2DAM/dam-ad_psp/Proyecto_registro_MartaMelguizo",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mamel/2DAM/dam-ad_psp/Proyecto_registro_MartaMelguizo&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="RegistroJornadaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="Registro_jornada" />
