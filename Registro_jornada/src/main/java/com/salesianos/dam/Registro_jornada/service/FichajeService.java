@@ -1,5 +1,7 @@
 package com.salesianos.dam.Registro_jornada.service;
 
+import com.salesianos.dam.Registro_jornada.exception.EmpleadoNoEncontradaException;
+import com.salesianos.dam.Registro_jornada.exception.FichajeDuplicadoException;
 import com.salesianos.dam.Registro_jornada.model.Empleado;
 import com.salesianos.dam.Registro_jornada.model.Fichaje;
 import com.salesianos.dam.Registro_jornada.model.TipoFichaje;
@@ -20,7 +22,7 @@ public class FichajeService {
 
     public Fichaje ficharEmpleado(Long empleadoId, TipoFichaje tipo) {
         Empleado empleado = empleadoRepository.findById(empleadoId)
-                .orElse(null); //Sustituto
+                .orElseThrow(() -> new EmpleadoNoEncontradaException(empleadoId));
 
         TipoFichaje ultimo = fichajeRepository
                 .findFirstByEmpleadoIdOrderByMomentoDescIdDesc(empleadoId)
@@ -29,7 +31,9 @@ public class FichajeService {
 
         TipoFichaje nuevo = tipo != null ? tipo : (ultimo == TipoFichaje.ENTRADA ? TipoFichaje.SALIDA : TipoFichaje.ENTRADA);
 
-    //Excepcion fichaje duplicado
+        if (nuevo == ultimo) {
+            throw new FichajeDuplicadoException(empleadoId, nuevo);
+        }
 
         return fichajeRepository.save(
                 Fichaje.builder()
@@ -40,7 +44,9 @@ public class FichajeService {
     }
 
     public List<Fichaje> getFichajesByEmpleado(Long empleadoId) {
-       //Excepcion
+        if (!empleadoRepository.existsById(empleadoId)) {
+            throw new EmpleadoNoEncontradaException(empleadoId);
+        }
         return fichajeRepository.findByEmpleadoIdOrderByMomentoAscIdAsc(empleadoId);
     }
 }

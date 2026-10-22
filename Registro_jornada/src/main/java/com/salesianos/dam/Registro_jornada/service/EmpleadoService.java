@@ -1,6 +1,8 @@
 package com.salesianos.dam.Registro_jornada.service;
 
 import com.salesianos.dam.Registro_jornada.DTO.EmpleadoRequestDto;
+import com.salesianos.dam.Registro_jornada.exception.DepartamentoNoEncontradaException;
+import com.salesianos.dam.Registro_jornada.exception.EmpleadoNoEncontradaException;
 import com.salesianos.dam.Registro_jornada.model.Departamento;
 import com.salesianos.dam.Registro_jornada.model.Empleado;
 import com.salesianos.dam.Registro_jornada.repository.DepartamentoRepository;
@@ -27,7 +29,7 @@ public class EmpleadoService {
 
     public Empleado getEmpleadosById(Long id) {
         return empleadoRepository.findById(id)
-                .orElse(null); //Sustituye
+                .orElseThrow(() -> new EmpleadoNoEncontradaException(id));
     }
 
     public Empleado addEmpleado(EmpleadoRequestDto dto) {
@@ -47,7 +49,7 @@ public class EmpleadoService {
                     e.setSalario(dto.salario());
                     return empleadoRepository.save(e);
                 })
-                .orElse(null);
+                .orElseThrow(() -> new EmpleadoNoEncontradaException(id));
     }
 
     @Transactional
@@ -65,6 +67,6 @@ public class EmpleadoService {
 
     private Departamento getDepartamento(Long deptoId) {
         return departamentoRepository.findById(deptoId)
-                .orElse(null); //Sustitu
+                .orElseThrow(() -> new DepartamentoNoEncontradaException(deptoId));
     }
 }
