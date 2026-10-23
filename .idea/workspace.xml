@@ -6,16 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="0d699332-c34c-47b9-8d3a-c484e6870db5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/DTO/DepartamentoRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/DTO/DepartamentoRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/DTO/DepartamentoResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/DTO/DepartamentoResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/DTO/EmpleadoRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/DTO/EmpleadoRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/DTO/EmpleadoResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/DTO/EmpleadoResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/DTO/FichajeRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/DTO/FichajeRequestDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/DTO/FichajeResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/DTO/FichajeResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/config/ValidationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/config/ValidationConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/controller/DepartamentoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/controller/DepartamentoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/controller/EmpleadoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/controller/EmpleadoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/controller/FichajeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/controller/FichajeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/utils/DataSeed.java" beforeDir="false" afterPath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/utils/DataSeed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/exception/DepartamentoNoEncontradaException.java" beforeDir="false" afterPath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/exception/DepartamentoNoEncontradaException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/exception/EmpleadoNoEncontradaException.java" beforeDir="false" afterPath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/exception/EmpleadoNoEncontradaException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/exception/EntityNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/exception/EntityNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/exception/FichajeDuplicadoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/exception/FichajeDuplicadoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/service/DepartamentoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/service/DepartamentoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/service/EmpleadoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/service/EmpleadoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/validation/SalariosDentroDePresupuesto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/validation/SalariosDentroDePresupuesto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/validation/SalariosDentroDePresupuestoValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Registro_jornada/src/main/java/com/salesianos/dam/Registro_jornada/validation/SalariosDentroDePresupuestoValidator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,61 +54,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.4157520014199735E-6" />
-      <entry key="MS500" value="0.06804736372031522" />
-      <entry key="S2" value="0.6521286653270424" />
-      <entry key="S5" value="1.233273170759039" />
-      <entry key="S10" value="1.768462573090935" />
-      <entry key="S30" value="3.8556499206971044" />
-      <entry key="S60" value="6.22282941849336" />
-      <entry key="M2" value="8.945992783272716" />
-      <entry key="M5" value="13.844801255588068" />
-      <entry key="M10" value="22.541575934142077" />
-      <entry key="M15" value="31.8871208790365" />
-      <entry key="M30" value="55.5325378552758" />
-      <entry key="H1" value="85.88927249779972" />
-      <entry key="H2" value="122.39032526925128" />
-      <entry key="H4" value="158.664471078747" />
-      <entry key="D1" value="210.05393423274631" />
-      <entry key="W1" value="221.91348694240915" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="1.623162027168699E-189" />
+      <entry key="S30" value="4.740773825421681E-63" />
+      <entry key="S60" value="2.418890894047865E-31" />
+      <entry key="M2" value="1.9329739509315576E-15" />
+      <entry key="M5" value="8.126863437428499E-6" />
+      <entry key="M10" value="0.01773849909760012" />
+      <entry key="M15" value="0.2735840483524513" />
+      <entry key="M30" value="5.183210922070352" />
+      <entry key="H1" value="26.45131529443728" />
+      <entry key="H2" value="68.40095914204582" />
+      <entry key="H4" value="119.40250802506483" />
+      <entry key="D1" value="202.56108062324103" />
+      <entry key="W1" value="223.29661175999527" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.000002927295868" />
-      <entry key="S2" value="1.0413634404894563" />
-      <entry key="S5" value="1.2796812744121455" />
-      <entry key="S10" value="1.5347778496002173" />
-      <entry key="S30" value="2.412851604587912" />
-      <entry key="S60" value="4.4326123210922574" />
-      <entry key="M2" value="8.00759684509412" />
-      <entry key="M5" value="16.511357323088358" />
-      <entry key="M10" value="28.921402739732603" />
-      <entry key="M15" value="39.26814700471686" />
-      <entry key="M30" value="60.64034380053371" />
-      <entry key="H1" value="83.72979384820427" />
-      <entry key="H2" value="108.51663580260237" />
-      <entry key="H4" value="132.0956238896066" />
-      <entry key="D1" value="165.0704555898371" />
-      <entry key="W1" value="172.66404372553365" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0" />
+      <entry key="S60" value="1.0000000011827992" />
+      <entry key="M2" value="1.0000809235823318" />
+      <entry key="M5" value="1.0859064783480266" />
+      <entry key="M10" value="1.996685749774131" />
+      <entry key="M15" value="3.5409481029392005" />
+      <entry key="M30" value="11.522104680171886" />
+      <entry key="H1" value="33.76957166310625" />
+      <entry key="H2" value="69.90123988192556" />
+      <entry key="H4" value="109.35429805678923" />
+      <entry key="D1" value="169.730098132815" />
+      <entry key="W1" value="184.39245435418084" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.02240555497056865" />
-      <entry key="MS500" value="0.4889612765725347" />
-      <entry key="S2" value="1.2940665325086722" />
-      <entry key="S5" value="2.1768241221377673" />
-      <entry key="S10" value="3.0564982081908236" />
-      <entry key="S30" value="6.079876443446715" />
-      <entry key="S60" value="10.450048109913446" />
-      <entry key="M2" value="16.763770352504753" />
-      <entry key="M5" value="30.20905934837235" />
-      <entry key="M10" value="51.34007544720149" />
-      <entry key="M15" value="71.04552449656946" />
-      <entry key="M30" value="116.08891731693079" />
-      <entry key="H1" value="169.56148238883222" />
-      <entry key="H2" value="230.87002039701454" />
-      <entry key="H4" value="290.73783369922126" />
-      <entry key="D1" value="375.11980868450206" />
-      <entry key="W1" value="394.5768477614746" />
+      <entry key="MS100" value="5.425065192667057E-5" />
+      <entry key="MS500" value="0.14024293506631055" />
+      <entry key="S2" value="0.611956071631" />
+      <entry key="S5" value="0.8216523453080837" />
+      <entry key="S10" value="0.9064504097346329" />
+      <entry key="S30" value="0.9677904892772208" />
+      <entry key="S60" value="0.9837634327247116" />
+      <entry key="M2" value="0.9919287101028113" />
+      <entry key="M5" value="1.0822500567399345" />
+      <entry key="M10" value="2.0100923632779426" />
+      <entry key="M15" value="3.808390011983635" />
+      <entry key="M30" value="16.692234031233596" />
+      <entry key="H1" value="60.1994743881186" />
+      <entry key="H2" value="138.27939625294016" />
+      <entry key="H4" value="228.73888539814808" />
+      <entry key="D1" value="372.2865529811485" />
+      <entry key="W1" value="407.6883488911481" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -120,8 +126,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.RegistroJornadaApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "10-09-swagger",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/mamel/2DAM/dam-ad_psp/Proyecto_registro_MartaMelguizo",

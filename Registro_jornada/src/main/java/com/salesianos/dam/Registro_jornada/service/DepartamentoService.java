@@ -25,7 +25,7 @@ public class DepartamentoService {
         return departamentoRepository.findById(id)
                 .orElseThrow(() -> new DepartamentoNoEncontradaException(id));
     }
-    
+
     public Departamento addDepartamento(DepartamentoRequestDto dto) {
         return departamentoRepository.save(dto.to());
     }

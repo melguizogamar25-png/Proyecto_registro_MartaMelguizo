@@ -12,7 +12,7 @@ import org.springframework.util.StringUtils;
 import java.math.BigDecimal;
 
 public class SalariosDentroDePresupuestoValidator
-    implements ConstraintValidator<SalariosDentroDePresupuesto, EmpleadoRequestDto> {
+        implements ConstraintValidator<SalariosDentroDePresupuesto, EmpleadoRequestDto> {
 
     @Autowired
     private DepartamentoRepository departamentoRepository;
@@ -22,7 +22,7 @@ public class SalariosDentroDePresupuestoValidator
 
     @Override
     public boolean isValid(EmpleadoRequestDto value, ConstraintValidatorContext context) {
-        if (value == null || value.departamentoId() == null || value.salario() == null){
+        if (value == null || value.departamentoId() == null || value.salario() == null) {
             return true;
         }
 
@@ -30,24 +30,24 @@ public class SalariosDentroDePresupuestoValidator
                 .findById(value.departamentoId())
                 .orElse(null);
 
-        if(departamento == null) {
+        if (departamento == null) {
             return true;
         }
 
         BigDecimal salariosActuales = empleadoRepository
                 .sumSalarioByDepartamentoId(departamento.getId());
 
-        if(salariosActuales == null) {
+        if (salariosActuales == null) {
             salariosActuales = BigDecimal.ZERO;
         }
 
         boolean valido = salariosActuales.add(value.salario())
                 .compareTo(departamento.getPresupuesto()) <= 0;
 
-        if(!valido) {
+        if (!valido) {
             context.disableDefaultConstraintViolation();
             context.buildConstraintViolationWithTemplate(
-                    context.getDefaultConstraintMessageTemplate())
+                            context.getDefaultConstraintMessageTemplate())
                     .addPropertyNode("salario")
                     .addConstraintViolation();
         }

@@ -34,7 +34,7 @@ public record DepartamentoResponseDto(
         )
         List<EmpleadoResponseDto> empleados) {
 
-    public static DepartamentoResponseDto of (Departamento d) {
+    public static DepartamentoResponseDto of(Departamento d) {
         return new DepartamentoResponseDto(
                 d.getId(),
                 d.getNombre(),

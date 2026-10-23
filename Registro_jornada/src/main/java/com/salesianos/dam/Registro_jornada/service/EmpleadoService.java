@@ -35,7 +35,7 @@ public class EmpleadoService {
     public Empleado addEmpleado(EmpleadoRequestDto dto) {
         Empleado e = dto.to();
 
-        if(dto.departamentoId() != null) {
+        if (dto.departamentoId() != null) {
             e.setDepartamento(getDepartamento(dto.departamentoId()));
         }
         return empleadoRepository.save(e);

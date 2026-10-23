@@ -35,12 +35,12 @@ public record FichajeResponseDto(
         )
         Long empleadoId) {
 
-    public static FichajeResponseDto of (Fichaje f) {
+    public static FichajeResponseDto of(Fichaje f) {
         return new FichajeResponseDto(
-               f.getId(),
-               f.getMomento(),
-               f.getTipo(),
-               f.getEmpleado().getId()
+                f.getId(),
+                f.getMomento(),
+                f.getTipo(),
+                f.getEmpleado().getId()
         );
     }
 }
